@@ -1,0 +1,112 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.shapes {
+  display: flex;
+  gap: 20px;
+}
+
+.shape {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.circle {
+  background-color: lightgreen;
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid orange;
+  background-color: transparent;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+.rectangle {
+  background-color: pink;
+  width: 150px;
+  height: 100px;
+}
+
+/* Анимации */
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flip {
+  0%, 100% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(180deg);
+  }
+}
+
+/* Запуск анимаций */
+
+.pulse {
+  animation: pulse 2s infinite alternate;
+}
+
+.move {
+  animation: move 2s ease-in-out infinite;
+}
+
+.rotate {
+  animation: rotate 2s linear infinite;
+}
+
+.flip {
+  animation: flip 3s ease-in-out infinite;
+}
+
+.none_animation {
+  animation: none;
+}

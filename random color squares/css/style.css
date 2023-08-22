@@ -1,0 +1,38 @@
+/* Стили квадратов */
+
+.square {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #3498db;
+  border: none;
+}
+
+.square-container {
+  text-align: center;
+}
+
+/* Стили кнопки */
+
+.rectangle-button {
+  width: auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #9b59b6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.rectangle-button:hover {
+  background-color: #8e44ad;
+}
+
+.button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
